@@ -7,6 +7,9 @@ pipeline{
       steps {
         echo "building the application..."
         echo "this is done"
+        nodejs('node-19') {
+          sh 'npm install'
+        }
       }
   }
     stage("test") {
